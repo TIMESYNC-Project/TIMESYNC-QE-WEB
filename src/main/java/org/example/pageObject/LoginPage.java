@@ -29,6 +29,12 @@ public class LoginPage {
     @FindBy(xpath = "//button[@class='swal2-confirm swal2-styled']")
     private WebElement OKbtn;
 
+    @FindBy(xpath = "//input[@id='checkbox-show-password']")
+    private WebElement checkBox;
+
+    public void clickCheckBox() {
+        checkBox.click();
+    }
 
     public void setEmployeeNIP(String user) {
         employeeNIP.sendKeys(user);
@@ -52,4 +58,6 @@ public class LoginPage {
     public boolean isDisplayed(){
         return employeeNIP.isDisplayed();
     }
+
+
 }

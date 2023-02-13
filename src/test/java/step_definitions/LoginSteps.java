@@ -92,4 +92,12 @@ public class LoginSteps {
         loginPage.clickOK();
         Thread.sleep(3000);
     }
+
+    @And("Employee click on check box password")
+    public void employeeClickOnCheckBoxPassword() throws InterruptedException {
+        LoginPage loginPage = new LoginPage(webDriver);
+        loginPage.clickCheckBox();
+        Thread.sleep(3000);
+    }
+
 }
