@@ -22,7 +22,7 @@ public class Hooks {
                 System.getProperty("user.dir") + "\\driver\\chromedriver.exe");
 
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized", "window-size=1280,720");
+        options.addArguments("--start-maximized");
         Map<String, Object> prefs = new HashMap<String, Object>();
         Map<String, Object> profile = new HashMap<String, Object>();
 
