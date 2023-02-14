@@ -53,13 +53,12 @@ public class RecordsAdminPage {
         searchRecords.sendKeys(nameEmployee);
     }
     @FindBy(id = "btn-detail-records")
-    private List<WebElement> selected;
+    public List<WebElement> selected;
 
     public void clickSelected() {
-        int j = randomNumber(selected.size() - 1,4);
+        int j = randomNumber(8, selected.size() - 1);
         selected.get(j).click();
     }
-
 
     @FindBy(xpath = "//button[@id='btn-search']")
     private WebElement searchBtn;
@@ -82,7 +81,7 @@ public class RecordsAdminPage {
         detailedMore.click();
     }
 
-    @FindBy(xpath = "//div[@class='undefined p-10']//div[@class='modal-box border-2 border-sky flex flex-col justify-center text-sky undefined']")
+    @FindBy(xpath = "//h1[@class='capitalize text-xl md:text-2xl lg:text-3xl font-extrabold undefined']")
     private WebElement detailedRecords;
 
     public boolean detailedRecordsisDisplayed(){
@@ -123,19 +122,26 @@ public class RecordsAdminPage {
         b.selectByVisibleText(typeAttendance);
     }
 
-//    @FindBy(xpath = "//input[@id='input-date-start']")
-//    private WebElement dateStart;
-//
-//    public void inputDateStart(){
-//
-//    }
-//
-//    @FindBy(xpath = "//input[@id='input-date-end']")
-//    private WebElement dateEnd;
-//
-//    public void inputDateEnd(){
-//
-//    }
+    @FindBy(id = "input-date-range-picker")
+    private WebElement clickdate;
+
+    public void clickDateRecords(){
+        clickdate.click();
+    }
+
+    @FindBy(css = ".react-datepicker__day--020")
+    private WebElement dateStart;
+
+    public void startDateRecords(){
+        dateStart.click();
+    }
+
+    @FindBy(css = ".react-datepicker__day--022")
+    private WebElement dateEnd;
+
+    public void endDateRecords(){
+        dateEnd.click();
+    }
 
 
     @FindBy(xpath = "//label[@id='btn-cancel-attendance']")

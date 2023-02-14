@@ -19,7 +19,7 @@ public class HomeAdminSteps {
         this.webDriver = Hooks.webDriver;
     }
 
-    @Given("Admin login with \"([^\"]*)\" as username and \"([^\"]*)\" as password to timesync website")
+    @Given("^Admin login with \"([^\"]*)\" as username and \"([^\"]*)\" as password to timesync website$")
     public void adminLoginToTimesyncWebsite(String NIP, String pwd) throws InterruptedException {
         LoginPage loginPage = new LoginPage(webDriver);
         loginPage.isDisplayed();
@@ -31,7 +31,7 @@ public class HomeAdminSteps {
         Thread.sleep(3000);
     }
 
-    @When("Admin successfully on landing page")
+    @When("^Admin successfully on landing page$")
     public void adminSuccessfullyOnLandingPage() throws InterruptedException{
         HomeAdminPage homePage = new HomeAdminPage(webDriver);
         homePage.dashboardIsDisplayed();
@@ -39,14 +39,14 @@ public class HomeAdminSteps {
         Thread.sleep(3000);
     }
 
-    @And("Admin click Total Employees")
+    @And("^Admin click Total Employees$")
     public void adminClickTotalEmployees() throws InterruptedException{
         HomeAdminPage homePage = new HomeAdminPage(webDriver);
         homePage.clickTotalEmployee();
         Thread.sleep(3000);
     }
 
-    @Then("System will be showing Employees page from Home")
+    @Then("^System will be showing Employees page from Home$")
     public void systemWillBeShowingEmployeesPage() throws InterruptedException{
         HomeAdminPage homePage = new HomeAdminPage(webDriver);
         homePage.employeesIsDisplayed();
@@ -61,14 +61,14 @@ public class HomeAdminSteps {
         Thread.sleep(3000);
     }
 
-    @And("Admin click Inbox")
+    @And("^Admin click Inbox$")
     public void adminClickInbox() throws InterruptedException{
         HomeAdminPage homePage = new HomeAdminPage(webDriver);
         homePage.clickInbox();
         Thread.sleep(3000);
     }
 
-    @Then("System will be showing Inbox page")
+    @Then("^System will be showing Inbox page$")
     public void systemWillBeShowingInboxPage() throws InterruptedException{
         HomeAdminPage homePage = new HomeAdminPage(webDriver);
         homePage.inboxIsDisplayed();

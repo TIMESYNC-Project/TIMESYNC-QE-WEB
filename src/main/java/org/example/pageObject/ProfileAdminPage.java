@@ -17,12 +17,12 @@ public class ProfileAdminPage {
 
     }
 
-    String pathImage = System.getProperty("user.dir")+"\\src\\test\\resources\\file_input\\";
+    String pathImage = System.getProperty("user.dir")+"\\src\\test\\resources\\input_files\\";
 
-    @FindBy(xpath = "//a[@id='btn-sidebar-profile']")
+    @FindBy(css = "#btn-sidebar-profile")
     private WebElement sideProfileBtn;
 
-    @FindBy(xpath = "//h1[@class='capitalize text-3xl  font-extrabold']")
+    @FindBy(xpath = "//h1[@class='capitalize text-xl md:text-2xl lg:text-3xl font-extrabold w-full']")
     private WebElement profilePage;
 
     @FindBy(xpath = "//div[@class='w-4/6 flex flex-col']")
@@ -99,26 +99,32 @@ public class ProfileAdminPage {
     }
 
     public void setCompanyName(String cpName) {
+        editNameField.clear();
         editNameField.sendKeys(cpName);
     }
 
     public void setCompanyPhone(String cpPhone) {
+        editPhoneField.clear();
         editPhoneField.sendKeys(cpPhone);
     }
 
     public void setCompanyEmail(String cpEmail) {
+        editEmailField.clear();
         editEmailField.sendKeys(cpEmail);
     }
 
     public void setCompanySocmed(String cpSocMed) {
+        editSocMedField.clear();
         editSocMedField.sendKeys(cpSocMed);
     }
 
     public void setCompanyAddress(String cpAddress) {
+        editAddressField.clear();
         editAddressField.sendKeys(cpAddress);
     }
 
     public void setCompanyDesc(String cpDesc) {
+        editDescField.clear();
         editDescField.sendKeys(cpDesc);
     }
 

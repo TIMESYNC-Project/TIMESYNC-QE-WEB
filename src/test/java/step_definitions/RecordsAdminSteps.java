@@ -171,4 +171,20 @@ public class RecordsAdminSteps {
         Assert.assertTrue(recordsPage.recordsPageisDisplayed());
         Thread.sleep(1000);
     }
+
+    @When("^Admin input date on date start field$")
+    public void adminInputDateOnDateStartField() throws InterruptedException {
+        RecordsAdminPage recordsPage = new RecordsAdminPage(webDriver);
+        recordsPage.clickDateRecords();
+        recordsPage.startDateRecords();
+        Thread.sleep(1000);
+    }
+
+    @When("^Admin input date on date end field$")
+    public void adminInputDateOnDateEndField() throws InterruptedException{
+        RecordsAdminPage recordsPage = new RecordsAdminPage(webDriver);
+        recordsPage.clickDateRecords();
+        recordsPage.endDateRecords();
+        Thread.sleep(1000);
+    }
 }

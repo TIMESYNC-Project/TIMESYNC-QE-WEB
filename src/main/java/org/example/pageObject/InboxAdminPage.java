@@ -32,7 +32,7 @@ public class InboxAdminPage {
         createNewInbox.click();
     }
 
-    @FindBy(xpath = "//div[@class='modal-box border-2 border-sky flex flex-col justify-center text-sky']")
+    @FindBy(xpath = "//p[@class='mb-5 pb-2 text-xl border-b-2 font-medium']")
     private WebElement popUpNewInbox;
 
     public boolean popCreateNewInbox(){
@@ -74,7 +74,7 @@ public class InboxAdminPage {
         cancelBtn.click();
     }
 
-    @FindBy(xpath = "//div[@class='undefined p-10']/div[1]//p[@class='text-red-600 duration-300 hover:cursor-pointer active:scale-90']")
+    @FindBy(xpath = "//div[@class='undefined p-3 md:p-6 xl:p-10']/div[1]//p[@class='text-sky hover:text-red-600 duration-300 hover:cursor-pointer active:scale-90']")
     private WebElement deleteMsg;
 
     public void deleteInboxBtn(){
@@ -102,23 +102,23 @@ public class InboxAdminPage {
         confirmDelete.click();
     }
 
-//    @FindBy()
-//    private WebElement detailInbox;
-//
-//    public void detailInboxClick(){
-//          detailInbox.click();
-//    }
-//      tunggu update FE
+    @FindBy(xpath = "//div[@class='h-full w-full overflow-auto mt-20']/div[2]//p[@class='mb-5 pb-2 text-2xl border-b-2 font-bold text-black']")
+    private WebElement detailInbox;
+
+    public void detailInboxClick(){
+          detailInbox.click();
+    }
+
 
     @FindBy(xpath = "//div[@class='undefined p-10']/div[1]//p[@class='mb-5 pb-2 text-2xl border-b-2 font-bold text-black']")
     private WebElement detailPopUp;
 
-    public void detailInboxisDisplayed(){
-        detailPopUp.isDisplayed();
+    public boolean detailInboxisDisplayed(){
+        return detailPopUp.isDisplayed();
     }
 
-    //tanyain lg nih ((tunggu update FE))
-    @FindBy(xpath = "//div[@class='undefined p-10']/div[1]//label[@class='w-28 text-sm text-center border-2 border-sky rounded-xl py-1 text-sky font-medium duration-300 hover:cursor-pointer hover:bg-red-600 hover:text-white  active:scale-90']")
+
+    @FindBy(xpath = "//div[@class='h-full w-full overflow-auto mt-20']/div[2]//label[@class='w-28 text-sm text-center border-2 border-sky rounded-xl py-1 text-sky font-medium duration-300 hover:cursor-pointer hover:bg-red-600 hover:text-white  active:scale-90']")
     private WebElement closePopUp;
 
     public void closeDetailInbox(){

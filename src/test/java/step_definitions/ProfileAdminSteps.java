@@ -22,7 +22,7 @@ public class ProfileAdminSteps {
         Thread.sleep(2000);
     }
 
-    @Then("System will be showing Profile page")
+    @Then("^System will be showing Profile page$")
     public void systemWillBeShowingProfilePage() throws InterruptedException{
         ProfileAdminPage profilePage = new ProfileAdminPage(webDriver);
         profilePage.profilePageIsDisplayed();
@@ -124,7 +124,7 @@ public class ProfileAdminSteps {
         Thread.sleep(2000);
     }
 
-    @Then("System will be showing Profile")
+    @Then("^System will be showing Profile$")
     public void systemWillBeShowingProfile() throws InterruptedException{
         ProfileAdminPage profilePage = new ProfileAdminPage(webDriver);
         profilePage.profileIsDisplayed();

@@ -30,34 +30,24 @@ public class SettingsAdminPage {
     private WebElement inputStartHour;
 
     public void setInputStartHour(String start){
+        inputStartHour.clear();
         inputStartHour.sendKeys(start);
-    }
-
-    @FindBy(xpath = "//input[@id='input-start-minute']")
-    private WebElement inputStartMinute;
-
-    public void setInputStartMinute(String startMin){
-        inputStartMinute.sendKeys(startMin);
     }
 
     @FindBy(xpath = "//input[@id='input-end-hour']")
     private WebElement inputEndHour;
 
     public void setInputEndHour(String end){
+        inputEndHour.clear();
         inputEndHour.sendKeys(end);
     }
 
-    @FindBy(xpath = "//input[@id='input-end-minute']")
-    private WebElement inputEndMinute;
-
-    public void setInputEndMinute(String endMin){
-        inputEndMinute.sendKeys(endMin);
-    }
 
     @FindBy(xpath = "//input[@id='input-tolerancy']")
     private WebElement timeMin;
 
     public void setTolerancyMin(String tolerancyMin){
+        timeMin.clear();
         timeMin.sendKeys(tolerancyMin);
     }
 
@@ -65,6 +55,7 @@ public class SettingsAdminPage {
     private WebElement leaveDay;
 
     public void setLeaveDay(String leftDay){
+        leaveDay.clear();
         leaveDay.sendKeys(leftDay);
     }
 

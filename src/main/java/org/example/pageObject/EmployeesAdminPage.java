@@ -6,6 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import java.security.SecureRandom;
+import java.util.List;
+
 public class EmployeesAdminPage {
 
     public static WebDriver driver;
@@ -15,10 +18,15 @@ public class EmployeesAdminPage {
         this.driver = driver;
 
     }
+    public static final SecureRandom random = new SecureRandom();
+    public int randomNumber(int min, int max){
+        return random.nextInt(max - min + 1) + min;
+    }
 
-    String pathCSV = System.getProperty("user.dir")+"\\src\\test\\resources\\file_input\\";
 
-    @FindBy(xpath = "//a[@id='btn-sidebar-employees']")
+    String pathCSV = System.getProperty("user.dir")+"\\src\\test\\resources\\input_files\\";
+
+    @FindBy(id = "btn-sidebar-employees")
     private WebElement clickEmployee;
 
     public void employeeNavBar(){ clickEmployee.click();}
@@ -152,11 +160,12 @@ public class EmployeesAdminPage {
         cancelAddBtn.click();
     }
 
-    @FindBy(xpath = "//div[49]//label[@class='text-sky hover:cursor-pointer hover:text-orange-500']")
-    private WebElement editProfileBtn;
+    @FindBy(className = "text-sky hover:cursor-pointer hover:text-orange-500")
+    public List<WebElement> editProfileBtn;
 
     public void editEmployeeProfileBtn(){
-        editProfileBtn.click();
+        int j = randomNumber(12, editProfileBtn.size() - 1);
+        editProfileBtn.get(j).click();
     }
 
     @FindBy(xpath = "//div[@class='undefined p-10']/div[1]//button[@class='mx-3 text-sky hover:cursor-pointer hover:text-red-600']")
@@ -206,6 +215,7 @@ public class EmployeesAdminPage {
     private WebElement editEmployeeName;
 
     public void editNameEmployee(String nameEmployee){
+        editEmployeeName.clear();
         editEmployeeName.sendKeys(nameEmployee);
     }
 
@@ -213,6 +223,7 @@ public class EmployeesAdminPage {
     private WebElement editEmployeeEmail;
 
     public void editEmailEmployee(String emailEmployee){
+        editEmployeeEmail.clear();
         editEmployeeEmail.sendKeys(emailEmployee);
     }
 
@@ -228,6 +239,7 @@ public class EmployeesAdminPage {
     private WebElement editEmployeePhone;
 
     public void editPhoneEmployee(String phoneEmployee){
+        editEmployeePhone.clear();
         editEmployeePhone.sendKeys(phoneEmployee);
     }
 
@@ -235,7 +247,8 @@ public class EmployeesAdminPage {
     private WebElement editEmployeeRole;
 
     public void editRoleEmployee(String roleEmployee){
-        editEmployeeRole.sendKeys(roleEmployee);
+        Select b = new Select(editEmployeeRole);
+        b.selectByVisibleText(roleEmployee);
     }
 
     @FindBy(xpath = "//select[@id='select-edit-gender']")
@@ -250,6 +263,7 @@ public class EmployeesAdminPage {
     private WebElement editEmployeeBirth;
 
     public void editBdayEmployee(String birthEmployee){
+        editEmployeeBirth.clear();
         editEmployeeBirth.sendKeys(birthEmployee);
     }
 
@@ -257,17 +271,18 @@ public class EmployeesAdminPage {
     private WebElement editEmployeeAddress;
 
     public void editAddressEmployee(String addressEmployee){
+        editEmployeeAddress.clear();
         editEmployeeAddress.sendKeys(addressEmployee);
     }
 
-    @FindBy(xpath = "//div[@class='modal-box pt-52 border-2 border-sky flex flex-col justify-center text-sky']//button[@class='w-24 text-sm text-center border-2 border-sky bg-sky rounded-xl py-1 text-gray-50 font-medium duration-300 hover:cursor-pointer  hover:bg-blue-900  active:scale-90']")
-    private WebElement submitBtn;
+    @FindBy(className = "w-24 text-sm text-center border-2 border-sky bg-sky rounded-xl py-1 text-gray-50 font-medium duration-300 hover:cursor-pointer  hover:bg-blue-900  active:scale-90 disabled:bg-gray-300 disabled:text-gray-400 disabled:border-gray-300 disabled:cursor-not-allowed disabled:active:scale-100")
+    public WebElement submitBtn;
 
     public void submitEditEmployeeProfileBtn(){
         submitBtn.click();
     }
 
-    @FindBy(xpath = "//label[@id='btn-edit-cancel']")
+    @FindBy(className = "w-24 text-sm text-center border-2 border-sky rounded-xl py-1 text-sky font-medium duration-300 hover:cursor-pointer hover:bg-red-600 hover:text-white  active:scale-90 disabled:bg-gray-300 disabled:text-gray-400 disabled:border-gray-300 disabled:cursor-not-allowed disabled:active:scale-100")
     private WebElement cancelBtn;
 
     public void cancelEditEmployeeProfileBtn(){

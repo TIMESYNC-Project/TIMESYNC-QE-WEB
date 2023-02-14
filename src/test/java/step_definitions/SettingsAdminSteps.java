@@ -40,11 +40,10 @@ public class SettingsAdminSteps {
         Thread.sleep(1000);
     }
 
-    @When("^Admin input start office hours to (\\d+) and (\\d+)$")
-    public void adminInputStartOfficeHoursToAnd(String startHours_1, String startHours_2) throws InterruptedException{
+    @When("^Admin input start office hours to \"([^\"]*)\"$")
+    public void adminInputStartOfficeHoursToAnd(String startHours_1) throws InterruptedException{
         SettingsAdminPage settingsPage = new SettingsAdminPage(webDriver);
         settingsPage.setInputStartHour(startHours_1);
-        settingsPage.setInputStartMinute(startHours_2);
         Thread.sleep(1000);
     }
 
@@ -56,11 +55,10 @@ public class SettingsAdminSteps {
         Thread.sleep(1000);
     }
 
-    @When("^Admin input end office hours to (\\d+) and (\\d+)$")
-    public void adminInputEndOfficeHoursToAnd(String endHours_1, String endHours_2) throws InterruptedException{
+    @When("^Admin input end office hours to \"([^\"]*)\"$")
+    public void adminInputEndOfficeHoursToAnd(String endHours_1) throws InterruptedException{
         SettingsAdminPage settingsPage = new SettingsAdminPage(webDriver);
         settingsPage.setInputEndHour(endHours_1);
-        settingsPage.setInputEndMinute(endHours_2);
         Thread.sleep(1000);
     }
 

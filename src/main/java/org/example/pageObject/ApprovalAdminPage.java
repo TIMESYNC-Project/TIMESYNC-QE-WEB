@@ -5,6 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.security.SecureRandom;
+import java.util.List;
+
 public class ApprovalAdminPage {
 
     public static WebDriver driver;
@@ -14,6 +17,11 @@ public class ApprovalAdminPage {
         this.driver = driver;
 
     }
+    public static final SecureRandom random = new SecureRandom();
+
+    public int randomNumber(int min, int max){
+        return random.nextInt(max - min + 1) + min;
+    }
 
     @FindBy(xpath = "//h1[@class='capitalize text-xl md:text-2xl lg:text-3xl font-extrabold undefined']")
     private WebElement approvalPage;
@@ -22,7 +30,7 @@ public class ApprovalAdminPage {
         return approvalPage.isDisplayed();
     }
 
-    @FindBy(xpath = "//a[@id='btn-sidebar-approval']")
+    @FindBy(id = "btn-sidebar-approval")
     private WebElement sidebarBtnAcc;
 
     public void sidebarApprovalBtn(){
@@ -41,16 +49,19 @@ public class ApprovalAdminPage {
         closePopUp.click();
     }
 
-    // ini diganti nanti
-    @FindBy(xpath = "//label[contains(.,'Feb 10 2023Violet EvergardenOn Leavepending')]")
-    private WebElement selectPending1;
+    @FindBy(className = "flex justify-between items-center text-xs md:text-sm lg:text-base hover:cursor-pointer")
+    public List<WebElement> selectPending1;
 
-    public void selectPendingApproval_1(){selectPending1.click();}
+    public void selectPendingApproval_1(){
+        int j = randomNumber(101, selectPending1.size() - 1);
+        selectPending1.get(j).click();}
 
-    @FindBy(xpath = "//label[contains(.,'Feb 10 2023Violet EvergardenAnnual Leavepending')]")
-    private WebElement selectPending2;
+    @FindBy(xpath = "flex justify-between items-center text-xs md:text-sm lg:text-base hover:cursor-pointer")
+    public List<WebElement> pending;
 
-    public void selectPendingApproval_2(){selectPending2.click();}
+    public void selectPendingApproval_2(){
+        int j = randomNumber(101, pending.size() - 1);
+        pending.get(j).click();}
 
     @FindBy(xpath = "//button[@id='btn-reject-modals']")
     private WebElement rejectApprovals;

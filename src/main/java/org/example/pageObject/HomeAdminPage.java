@@ -20,7 +20,7 @@ public class HomeAdminPage {
     @FindBy(xpath="//h1[.='total employees']")
     private WebElement totalEmployees;
 
-    @FindBy(xpath="//h1[@class='capitalize text-3xl  font-extrabold']")
+    @FindBy(xpath="//h1[@class='capitalize text-xl md:text-2xl lg:text-3xl font-extrabold undefined']")
     private WebElement employeesPage;
 
     @FindBy(xpath = "//h1[.='employees']")
@@ -29,7 +29,7 @@ public class HomeAdminPage {
     @FindBy(xpath = "//h1[.='inbox']")
     private WebElement inbox;
 
-    @FindBy(xpath="//h1[@class='capitalize text-3xl  font-extrabold']")
+    @FindBy(xpath="//h1[@class='capitalize text-xl md:text-2xl lg:text-3xl font-extrabold undefined']")
     private WebElement inboxPage;
 
     @FindBy(xpath = "//p[.='Traffic total working hours by weekly']")

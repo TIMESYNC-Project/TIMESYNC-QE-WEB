@@ -39,7 +39,7 @@ public class EmployeesAdminSteps {
         Thread.sleep(1000);
     }
 
-    @And("Admin click Search button")
+    @And("^Admin click Search button$")
     public void adminClickSearchButton() throws  InterruptedException{
         EmployeesAdminPage employeePage = new EmployeesAdminPage(webDriver);
         employeePage.clickSearchEmployee();
