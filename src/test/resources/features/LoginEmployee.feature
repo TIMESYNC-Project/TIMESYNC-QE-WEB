@@ -6,7 +6,7 @@ Feature: Login Employee
   Scenario Outline: Password field validation with check book functionality
     Given Employee open the website timesync
     When Employee input "<NIP>" as NIP and input "<password>" as password
-    And Employee click on check box password
+    Then Employee click on check box password
     Examples:
       | NIP | password   |
       |     | abcdefghi  |
@@ -25,8 +25,8 @@ Feature: Login Employee
     Given Employee open the website timesync
     When Employee input "<NIP>" as NIP and input "<password>" as password
     And Employee click login button
-    Then Employee can see error "<errorMessage>" on login page
-    And Employee click OK button
+    And Employee can see error "<errorMessage>" on login page
+    Then Employee click OK button
     Examples:
       | NIP     | password | errorMessage               |
       | 23026   | 001100   | password not match         |

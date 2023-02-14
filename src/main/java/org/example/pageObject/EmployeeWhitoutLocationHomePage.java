@@ -16,12 +16,12 @@ public class EmployeeWhitoutLocationHomePage {
     }
 
     public boolean displayErrorMessageClockIn(String errorMsgIn) {
-        String a = driver.findElement(By.xpath("//div[@class='swal2-html-container']")).getText();
+        String a = driver.findElement(By.xpath(".swal2-html-container")).getText();
         return true;
     }
 
     public boolean displayErrorMessageClockOut(String errorMsgOut) {
-        String a = driver.findElement(By.xpath("//div[@class='swal2-html-container']")).getText();
+        String a = driver.findElement(By.xpath(".swal2-html-container")).getText();
         return true;
     }
 

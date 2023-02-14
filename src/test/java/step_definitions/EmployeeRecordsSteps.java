@@ -51,4 +51,9 @@ public class EmployeeRecordsSteps {
         Thread.sleep(3000);
     }
 
+    @Then("System will showing records list")
+    public void systemWillShowingRecordsList() {
+        EmployeeRecordsPage employeeRecordsPage = new EmployeeRecordsPage(webDriver);
+        Assert.assertTrue(employeeRecordsPage.displayRecordsList());
+    }
 }

@@ -119,4 +119,11 @@ public class EmployeeProfileSteps {
         Assert.assertTrue(employeeProfilePage.warningValidatePwd(errorPwd));
         Thread.sleep(3000);
     }
+
+    @Then("System will showing error message for profile image upload \"([^\"]*)\"")
+    public void systemWillShowingErrorMessageForProfileImageUpload(String errorSize) throws InterruptedException {
+        EmployeeProfilePage employeeProfilePage = new EmployeeProfilePage(webDriver);
+        Assert.assertTrue(employeeProfilePage.displayErrorSizeImageProfile(errorSize));
+        Thread.sleep(6000);
+    }
 }

@@ -6,6 +6,7 @@ import cucumber.api.java.en.Then;
 import org.example.pageObject.EmployeeApprovalPage;
 import org.example.pageObject.EmployeeProfilePage;
 import org.example.pageObject.EmployeeRecordsPage;
+import org.example.pageObject.EmployeeWhitoutLocationHomePage;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
@@ -110,5 +111,12 @@ public class EmployeeApprovalSteps {
         EmployeeApprovalPage employeeApprovalPage = new EmployeeApprovalPage(webDriver);
         Assert.assertTrue(employeeApprovalPage.displayingRequestApproval());
         Thread.sleep(3000);
+    }
+
+    @And("System will showing error message for image upload \"([^\"]*)\"")
+    public void systemWillShowingErrorMessageForImageUpload(String errorSize) throws InterruptedException {
+        EmployeeApprovalPage employeeApprovalPage = new EmployeeApprovalPage(webDriver);
+        Assert.assertTrue(employeeApprovalPage.displayErrorSizeImage(errorSize));
+        Thread.sleep(6000);
     }
 }

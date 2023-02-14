@@ -33,6 +33,8 @@ public class EmployeeRecordsPage {
     @FindBy(xpath = "//div[@id='btn-date-range-picker']")
     private WebElement btnSearchRecords;
 
+    @FindBy(xpath = "//div[@class='undefined p-3 md:p-6 xl:p-10']/div[@class='my-5 xl:mx-24 undefined']/div[contains(.,'Feb 09 202310:49-13:01present')]")
+    private WebElement displayRecordsList;
 
     public void clickRecords() {
         btnRecords.click();
@@ -61,6 +63,10 @@ public class EmployeeRecordsPage {
 
     public void clickSearchRecords() {
         btnSearchRecords.click();
+    }
+
+    public boolean displayRecordsList() {
+        return displayRecordsList.isDisplayed();
     }
 
 }

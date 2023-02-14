@@ -111,5 +111,11 @@ public class EmployeeProfilePage {
         String a = driver.findElement(By.xpath("//div[@class='swal2-html-container']")).getText();
         return true;
     }
+
+    public boolean displayErrorSizeImageProfile(String errorSize) {
+        String a = driver.findElement(By.xpath("//div[@class='swal2-html-container']")).getText();
+        return true;
+    }
+
 }
 

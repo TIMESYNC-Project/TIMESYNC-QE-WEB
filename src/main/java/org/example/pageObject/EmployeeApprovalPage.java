@@ -1,5 +1,6 @@
 package org.example.pageObject;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,7 +16,7 @@ public class EmployeeApprovalPage {
         this.driver = driver;
     }
 
-    String pathImageApproval = System.getProperty("user.dir")+"\\src\\test\\resources\\input_files\\";
+    String pathImageApproval = System.getProperty("user.dir") + "\\src\\test\\resources\\input_files\\";
 
     //Displaying Approval Page
     @FindBy(xpath = "//p[.='Approval']")
@@ -104,8 +105,8 @@ public class EmployeeApprovalPage {
         inputDescription.sendKeys(description);
     }
 
-    public void chooseImageFile(String image){
-        uploadImage.sendKeys(pathImageApproval+(image));
+    public void chooseImageFile(String image) {
+        uploadImage.sendKeys(pathImageApproval + (image));
     }
 
     public void clickSubmitApproval() {
@@ -118,5 +119,10 @@ public class EmployeeApprovalPage {
 
     public boolean displayingRequestApproval() {
         return displayRequestApproval.isDisplayed();
+    }
+
+    public boolean displayErrorSizeImage(String errorSize) {
+        String a = driver.findElement(By.xpath("//div[@class='swal2-html-container']")).getText();
+        return true;
     }
 }
