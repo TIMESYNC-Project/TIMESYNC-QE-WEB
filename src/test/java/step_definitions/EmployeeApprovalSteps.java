@@ -98,7 +98,7 @@ public class EmployeeApprovalSteps {
         Thread.sleep(3000);
     }
 
-    @Then("System will showing error message")
+    @Then("^System will showing error message$")
     public void systemWillShowingErrorMessage() throws InterruptedException {
         EmployeeApprovalPage employeeApprovalPage = new EmployeeApprovalPage(webDriver);
         Assert.assertTrue(employeeApprovalPage.displayingErrorRequestApproval());
