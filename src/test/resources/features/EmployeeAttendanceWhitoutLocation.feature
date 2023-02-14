@@ -1,5 +1,5 @@
 @Timesync
-Feature: Clock In Employee Whitout Location 
+Feature: Clock In Employee Whitout Location
   As an employee i want to clock in whitout location permission at website timesync
 
   @NegativeCase

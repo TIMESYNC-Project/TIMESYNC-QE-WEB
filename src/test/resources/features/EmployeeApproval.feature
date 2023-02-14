@@ -25,7 +25,7 @@ Feature: Employee Approval
     And System will showing approval page
   Examples:
     | nip   | password | approvalType | startDate | endDate  | description     | image           |
-    | 23026 | 12345    | Annual Leave | 17022023  | 20022023 | Beranfkat Umroh | annualLeave.jpg |
+    | 23026 | 12345    | Annual Leave | 17022023  | 20022023 | Berangkat Umroh | annualLeave.jpg |
     | 23026 | 12345    | On Leave     | 10022023  | 12022023 | Cuti Hamil      | onLeave.jpg     |
     | 23026 | 12345    | Sick Leave   | 11022023  | 13022023 | Izin Sakit      | sickLeave.jpg   |
 
@@ -42,7 +42,7 @@ Feature: Employee Approval
     Then System showing request approval page
     Examples:
       | nip   | password | approvalType | startDate | endDate  | description     | image           |
-      | 23026 | 12345    | Annual Leave | 17022023  | 20022023 | Beranfkat Umroh | annualLeave.jpg |
+      | 23026 | 12345    | Annual Leave | 17022023  | 20022023 | Berangkat Umroh | annualLeave.jpg |
       | 23026 | 12345    | On Leave     | 10022023  | 12022023 | Cuti Hamil      | onLeave.jpg     |
       | 23026 | 12345    | Sick Leave   | 11022023  | 13022023 | Izin Sakit      | sickLeave.jpg   |
 
@@ -62,7 +62,7 @@ Feature: Employee Approval
     Then System showing request approval page
     Examples:
       | nip   | password | approvalType | startDate | endDate  | description     | image           |
-      | 23026 | 12345    | Annual Leave | 17022023  | 20022023 | Beranfkat Umroh | annualLeave.jpg |
+      | 23026 | 12345    | Annual Leave | 17022023  | 20022023 | Berangkat Umroh | annualLeave.jpg |
 
   @NegativeCase
   Scenario Outline: Request Approval without choose a date
