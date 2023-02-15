@@ -35,12 +35,12 @@ public class EmployeeRecordsSteps {
         Assert.assertTrue(employeeRecordsPage.displayRecordsPage());
     }
 
-    @And("Employee input date on calendar")
-    public void employeeInputDateOnCalendarByClickStartDateAsToEndDateAs() throws Throwable {
+    @And("Employee input date on calendar field \"([^\"]*)\" as start date and \"([^\"]*)\" as end date")
+    public void employeeInputDateOnCalendarFieldAsStartDateAndAsEndDate(String startDate, String endDate) throws InterruptedException {
         EmployeeRecordsPage employeeRecordsPage = new EmployeeRecordsPage(webDriver);
         employeeRecordsPage.clickDateField();
-        employeeRecordsPage.clickInputStartDate();
-        employeeRecordsPage.clickInputEndDate();
+        employeeRecordsPage.clickInputStartDate(startDate);
+        employeeRecordsPage.clickInputEndDate(endDate);
         Thread.sleep(3000);
     }
 
@@ -49,6 +49,12 @@ public class EmployeeRecordsSteps {
         EmployeeRecordsPage employeeRecordsPage = new EmployeeRecordsPage(webDriver);
         employeeRecordsPage.clickSearchRecords();
         Thread.sleep(3000);
+    }
+
+    @Then("System will showing records list")
+    public void systemWillShowingRecordsList() {
+        EmployeeRecordsPage employeeRecordsPage = new EmployeeRecordsPage(webDriver);
+        Assert.assertTrue(employeeRecordsPage.displayRecordsList());
     }
 
 }

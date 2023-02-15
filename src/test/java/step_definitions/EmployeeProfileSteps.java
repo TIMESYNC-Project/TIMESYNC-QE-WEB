@@ -32,7 +32,7 @@ public class EmployeeProfileSteps {
     public void systemWillShowingProfilePage() throws InterruptedException {
         EmployeeProfilePage employeeProfilePage = new EmployeeProfilePage(webDriver);
         Assert.assertTrue(employeeProfilePage.displayProfilePage());
-        Thread.sleep(3000);
+        Thread.sleep(5000);
     }
 
     @And("Employee click on company profile")
@@ -118,5 +118,12 @@ public class EmployeeProfileSteps {
         EmployeeProfilePage employeeProfilePage = new EmployeeProfilePage(webDriver);
         Assert.assertTrue(employeeProfilePage.warningValidatePwd(errorPwd));
         Thread.sleep(3000);
+    }
+
+    @Then("System will showing error message for profile image upload \"([^\"]*)\"")
+    public void systemWillShowingErrorMessageForProfileImageUpload(String errorSize) throws InterruptedException {
+        EmployeeProfilePage employeeProfilePage = new EmployeeProfilePage(webDriver);
+        Assert.assertTrue(employeeProfilePage.displayErrorSizeImageProfile(errorSize));
+        Thread.sleep(6000);
     }
 }

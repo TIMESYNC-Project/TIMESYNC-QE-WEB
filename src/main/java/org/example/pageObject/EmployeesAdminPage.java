@@ -26,7 +26,7 @@ public class EmployeesAdminPage {
 
     String pathCSV = System.getProperty("user.dir")+"\\src\\test\\resources\\input_files\\";
 
-    @FindBy(id = "btn-sidebar-employees")
+    @FindBy(xpath = "//a[@id='btn-sidebar-employees']")
     public WebElement clickEmployee;
 
     public void employeeNavBar(){ clickEmployee.click();}
@@ -51,7 +51,7 @@ public class EmployeesAdminPage {
         searchBtn.click();
     }
 
-    @FindBy(xpath = "//label[@id='btn-import-file']")
+    @FindBy(id = "btn-import-file")
     WebElement csvBtn;
 
     public void clickCSV() {

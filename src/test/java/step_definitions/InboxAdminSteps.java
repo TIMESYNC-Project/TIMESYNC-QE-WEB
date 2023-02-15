@@ -128,7 +128,7 @@ public class InboxAdminSteps {
         Thread.sleep(1000);
     }
 
-    @Then("^Message will be sent to NIP \"23037\"$")
+    @Then("^Message will be sent to NIP \"23005\"$")
     public void messageWillBeSentToNIP() throws InterruptedException {
         InboxAdminPage inboxPage = new InboxAdminPage(webDriver);
         inboxPage.inboxPageisDisplayed();
