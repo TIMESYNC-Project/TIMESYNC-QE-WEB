@@ -1,4 +1,4 @@
-#@Timesync
+@Timesync
 Feature: Home Functionality
   As an admin i want to check every menu on Home
 

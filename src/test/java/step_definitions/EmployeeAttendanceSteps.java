@@ -34,7 +34,7 @@ public class EmployeeAttendanceSteps {
     public void employeeSuccessfullyOnLandingPage() throws InterruptedException {
         EmployeeHomePage employeeHomePage = new EmployeeHomePage(webDriver);
         Assert.assertTrue(employeeHomePage.displayEmployeeAttendancePage());
-        Thread.sleep(5000);
+        Thread.sleep(6000);
     }
 
     //Verify Location showed on attendance page

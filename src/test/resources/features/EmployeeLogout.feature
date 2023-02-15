@@ -7,7 +7,7 @@ Feature: Logout Employee
     Given Employee open the website timesync
     When Employee input "23026" as NIP and input "12345" as password
     And Employee click login button
-    Then Employee successfully on landing page
+    And Employee successfully on landing page
     And Employee click on logout button
     And Employee click yes button
     Then Login page is displayed
