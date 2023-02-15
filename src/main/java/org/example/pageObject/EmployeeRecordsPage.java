@@ -24,12 +24,6 @@ public class EmployeeRecordsPage {
     @FindBy(xpath = "//input[@id='input-date-range-picker']")
     private WebElement btnDate;
 
-    @FindBy(xpath = "//div[@class='react-datepicker__day react-datepicker__day--005 react-datepicker__day--weekend']")
-    private WebElement btnStartDate;
-
-    @FindBy(xpath = "//div[@class='react-datepicker__day react-datepicker__day--009']")
-    private WebElement btnEndDate;
-
     @FindBy(xpath = "//div[@id='btn-date-range-picker']")
     private WebElement btnSearchRecords;
 
@@ -47,19 +41,16 @@ public class EmployeeRecordsPage {
     public void clickDateField() {
         btnDate.click();
     }
-    public void clickInputStartDate() {
+
+    public void clickInputStartDate(String startDate) {
+        WebElement btnStartDate = driver.findElement(By.xpath("//div[@class='react-datepicker__day react-datepicker__day--"+startDate+" react-datepicker__day--weekend']"));
         btnStartDate.click();
     }
-    public void clickInputEndDate() {
+
+    public void clickInputEndDate(String endDate) {
+        WebElement btnEndDate = driver.findElement(By.xpath("//div[@class='react-datepicker__day react-datepicker__day--"+endDate+"']"));
         btnEndDate.click();
     }
-
-//    public void clickInputStartDate1(String startDate) {
-//        btnStartDate.click();
-//    }
-//    public void clickInputEndDate1(String endDate) {
-//        btnEndDate.click();
-//    }
 
     public void clickSearchRecords() {
         btnSearchRecords.click();

@@ -32,7 +32,7 @@ public class EmployeeProfileSteps {
     public void systemWillShowingProfilePage() throws InterruptedException {
         EmployeeProfilePage employeeProfilePage = new EmployeeProfilePage(webDriver);
         Assert.assertTrue(employeeProfilePage.displayProfilePage());
-        Thread.sleep(3000);
+        Thread.sleep(5000);
     }
 
     @And("Employee click on company profile")

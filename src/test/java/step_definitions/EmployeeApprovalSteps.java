@@ -117,6 +117,6 @@ public class EmployeeApprovalSteps {
     public void systemWillShowingErrorMessageForImageUpload(String errorSize) throws InterruptedException {
         EmployeeApprovalPage employeeApprovalPage = new EmployeeApprovalPage(webDriver);
         Assert.assertTrue(employeeApprovalPage.displayErrorSizeImage(errorSize));
-        Thread.sleep(6000);
+        Thread.sleep(7000);
     }
 }

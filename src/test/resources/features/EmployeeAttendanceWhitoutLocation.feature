@@ -4,7 +4,7 @@ Feature: Clock In & Clock Out Employee Whitout Location
 
   @NegativeCase
   Scenario: Clock In Attendance without location permission
-    Given Employee login to timesync website with "23026" NIP & "12345" password
+    Given Employee login to timesync website with "23101" NIP & "12345" password
     When Employee click login button
     And Employee successfully on landing page
     And Employee click on clock in
@@ -12,7 +12,7 @@ Feature: Clock In & Clock Out Employee Whitout Location
 
   @NegativeCase
   Scenario: Clock Out Attendance without location permission
-    Given Employee login to timesync website with "23026" NIP & "12345" password
+    Given Employee login to timesync website with "23101" NIP & "12345" password
     When Employee click login button
     And Employee successfully on landing page
     And Employee click on clock out

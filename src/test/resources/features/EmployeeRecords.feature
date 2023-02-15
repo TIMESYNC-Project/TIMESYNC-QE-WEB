@@ -15,11 +15,9 @@ Feature: Employee Records
     And Employee successfully on landing page
     And Employee click on records button from home page
     And System will showing records page
-    And Employee input date on calendar
+    And Employee input date on calendar field "005" as start date and "009" as end date
     And Employee click on search icon
     Then System will showing records list
-
-
 
 
 
