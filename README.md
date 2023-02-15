@@ -14,14 +14,11 @@
 <br>
 
 ## 📝 Reports
-#### Company Profile
-![report-api-login](https://user-images.githubusercontent.com/68207916/)
+#### Admin
+![report-admin](https://user-images.githubusercontent.com/68300178/219095078-620b173b-806f-4a52-ae62-7adb2971ca04.jpg)
 
-#### Employee Approvals
-![report-api-register](https://user-images.githubusercontent.com/68207916/)
-
-#### Announcements
-![report-api-chats](https://user-images.githubusercontent.com/68207916/186059526-aa1641ed-12c8-47c1-9eae-e8f9aa9daa73.png)
+#### Employee
+![report-employee](https://user-images.githubusercontent.com/68300178/219095140-1dc21275-87f5-4eca-a0ed-6cdf4f00bf0f.jpg)
 
 <br>
 
@@ -61,9 +58,9 @@
 1. Ahmad Zain Azharul Falah <br> [![GitHub](https://img.shields.io/badge/Zain-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/zenzett)
 2. Aryo Yudhanto <br> [![GitHub](https://img.shields.io/badge/Yudha-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aryoyudhanto)
 
-### :robot: Frontend Teams
+### :robot: Quality Engineer Teams
 
-1. Ichlasiana Amalia <br>  [![GitHub](https://img.shields.io/badge/Amel-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ichlasiana)
+1. Ichlasiana Amallia <br>  [![GitHub](https://img.shields.io/badge/Amel-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ichlasiana)
 2. Febrian Syahrir Rizky <br>  [![GitHub](https://img.shields.io/badge/Febrian-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/rizkysyahrir)
 3. Dona Putra Por  <br> [![GitHub](https://img.shields.io/badge/Dona-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/donaputra)
 4. Rico Rinaldi  <br>  [![GitHub](https://img.shields.io/badge/Rico-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/RicoRinaldi93)
