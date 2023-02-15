@@ -19,19 +19,19 @@ public class ProfileAdminPage {
 
     String pathImage = System.getProperty("user.dir")+"\\src\\test\\resources\\input_files\\";
 
-    @FindBy(css = "#btn-sidebar-profile")
-    private WebElement sideProfileBtn;
+    @FindBy(xpath = "//a[@id='btn-sidebar-profile']")
+    WebElement sideProfileBtn;
 
     @FindBy(xpath = "//h1[@class='capitalize text-xl md:text-2xl lg:text-3xl font-extrabold w-full']")
     private WebElement profilePage;
 
-    @FindBy(xpath = "//div[@class='w-4/6 flex flex-col']")
+    @FindBy(xpath = "//h1[@class='capitalize text-xl md:text-2xl lg:text-3xl font-extrabold w-full']")
     private WebElement companyProfile;
 
     @FindBy(xpath = "//img[@alt='photo']")
     private WebElement companyLogo;
 
-    @FindBy(css = ".w-48")
+    @FindBy(xpath = "//p[@class='xl:w-48 btn tracking-wider bg-[#3282B8] text-white hover:border-white font-medium rounded-2xl capitalize border-4 border-white shadow-md shadow-black']")
     private WebElement updateBtn;
 
     @FindBy(xpath = "//input[@id='input-name']")

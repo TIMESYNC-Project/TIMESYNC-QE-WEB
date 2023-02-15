@@ -73,7 +73,7 @@ public class HomeAdminSteps {
         HomeAdminPage homePage = new HomeAdminPage(webDriver);
         homePage.inboxIsDisplayed();
         Assert.assertTrue(homePage.inboxIsDisplayed());
-        Thread.sleep(3000);
+        Thread.sleep(5000);
     }
 
     @Then("^System will be showing Graph Working Hours page$")

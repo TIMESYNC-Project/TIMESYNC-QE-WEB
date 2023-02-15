@@ -24,7 +24,7 @@ public class EmployeesAdminSteps {
         Thread.sleep(1000);
     }
 
-    @Then("System will be showing Employees page")
+    @Then("^System will be showing Employees page$")
     public void systemWillBeShowingEmployeesPage() throws InterruptedException{
         EmployeesAdminPage employeePage = new EmployeesAdminPage(webDriver);
         employeePage.employeePageisDisplayed();
@@ -46,7 +46,7 @@ public class EmployeesAdminSteps {
         Thread.sleep(1000);
     }
 
-    @Then("System will be showing profile with name \"Violet Evergarden\"")
+    @Then("System will be showing profile with name \"Alif\"")
     public void systemWillBeShowingProfileWithName() throws InterruptedException{
         EmployeesAdminPage employeePage = new EmployeesAdminPage(webDriver);
         employeePage.showEmployeeName();
@@ -273,7 +273,8 @@ public class EmployeesAdminSteps {
     @Then("^Employee data will not affected$")
     public void dataWillNotAffected() throws InterruptedException{
         EmployeesAdminPage employeePage = new EmployeesAdminPage(webDriver);
-        employeePage.employeeNameBtn();
+        employeePage.employeeProfileIsDisplayed();
+        Assert.assertTrue(employeePage.employeeProfileIsDisplayed());
         Thread.sleep(1000);
     }
 

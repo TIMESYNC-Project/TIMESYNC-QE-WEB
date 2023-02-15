@@ -1,5 +1,6 @@
 package org.example.pageObject;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,7 +26,7 @@ public class RecordsAdminPage {
 
     }
     @FindBy(css = "#btn-sidebar-records")
-    private WebElement recordsSideBtn;
+    WebElement recordsSideBtn;
 
     public void recordsSideBtn(){
         recordsSideBtn.click();
@@ -33,6 +34,7 @@ public class RecordsAdminPage {
 
 
     @FindBy(xpath = "//h1[@class='capitalize text-xl md:text-2xl lg:text-3xl font-extrabold undefined']")
+
     private WebElement recordsPageDisplay;
 
     public boolean recordsPageisDisplayed(){
@@ -81,6 +83,14 @@ public class RecordsAdminPage {
         detailedMore.click();
     }
 
+    @FindBy(xpath = "//p[@class='uppercase text-xl font-bold text-[#FFC909]']")
+
+    private WebElement NewAtdPageDisplay;
+
+    public boolean NewAtdPageisDisplayed(){
+        return NewAtdPageDisplay.isDisplayed();
+    }
+
     @FindBy(xpath = "//h1[@class='capitalize text-xl md:text-2xl lg:text-3xl font-extrabold undefined']")
     private WebElement detailedRecords;
 
@@ -114,6 +124,8 @@ public class RecordsAdminPage {
         createAttendance.click();
     }
 
+
+
     @FindBy(xpath = "//select[@id='select-attendance']")
     private WebElement selectAttendance;
 
@@ -129,17 +141,15 @@ public class RecordsAdminPage {
         clickdate.click();
     }
 
-    @FindBy(css = ".react-datepicker__day--020")
-    private WebElement dateStart;
 
-    public void startDateRecords(){
+    public void startDateRecords(String startDate){
+        WebElement dateStart = driver.findElement(By.xpath("//div[@class='react-datepicker__day react-datepicker__day--0"+startDate+"']"));
         dateStart.click();
     }
 
-    @FindBy(css = ".react-datepicker__day--022")
-    private WebElement dateEnd;
 
-    public void endDateRecords(){
+    public void endDateRecords(String endDate){
+        WebElement dateEnd = driver.findElement(By.xpath("//div[@class='react-datepicker__day react-datepicker__day--0"+endDate+"']"));
         dateEnd.click();
     }
 
@@ -157,5 +167,22 @@ public class RecordsAdminPage {
     public void submitAttendanceBtn(){
         submitAttendance.click();
     }
+
+    @FindBy(xpath = "//div[@id='btn-date-range-picker']")
+    WebElement searchDateRecords;
+
+    public void searchWithDate(){searchDateRecords.click();}
+
+    @FindBy(xpath = "//input[@id='input-date-start']")
+    WebElement dateStartAtdc;
+
+    public void addStartDateAttend(String dateStart){
+        dateStartAtdc.sendKeys(dateStart);
+    }
+
+    @FindBy(xpath = "//input[@id='input-date-end']")
+    WebElement dateEndAtdc;
+
+    public void addEndDateAttend(String dateEnd){dateEndAtdc.sendKeys(dateEnd);}
 
 }

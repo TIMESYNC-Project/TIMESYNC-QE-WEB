@@ -45,19 +45,13 @@ public class ApprovalsAdminStep {
         Thread.sleep(1000);
     }
 
-    @And("^Admin click selected pending employee card$")
+    @And("^Admin click selected any pending employee card$")
     public void adminClickSelectedPendingEmployeeCard() throws InterruptedException {
         ApprovalAdminPage approvalPage = new ApprovalAdminPage(webDriver);
         approvalPage.selectPendingApproval_1();
         Thread.sleep(1000);
     }
 
-    @And("^Admin click selected any pending employee card$")
-    public void adminClickSelectedAnyPendingEmployeeCard() throws InterruptedException{
-        ApprovalAdminPage approvalPage = new ApprovalAdminPage(webDriver);
-        approvalPage.selectPendingApproval_2();
-        Thread.sleep(1000);
-    }
 
     @When("^Admin click Approve approval button$")
     public void adminClickApproveApprovalButton() throws InterruptedException{

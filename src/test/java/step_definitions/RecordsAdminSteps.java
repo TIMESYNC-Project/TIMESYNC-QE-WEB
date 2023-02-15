@@ -158,13 +158,13 @@ public class RecordsAdminSteps {
     @Then("^New Attendance should be created$")
     public void newAttendanceShouldBeCreated() throws InterruptedException{
         RecordsAdminPage recordsPage = new RecordsAdminPage(webDriver);
-        recordsPage.recordsPageisDisplayed();
-        Assert.assertTrue(recordsPage.recordsPageisDisplayed());
+        recordsPage.NewAtdPageisDisplayed();
+        Assert.assertTrue(recordsPage.NewAtdPageisDisplayed());
         Thread.sleep(1000);
 
     }
 
-    @Then("^System will be showing records with NIP \"23037\"$")
+    @Then("^System will be showing records with NIP \"23002\"$")
     public void systemWillBeShowingRecordsWithNIP() throws InterruptedException{
         RecordsAdminPage recordsPage = new RecordsAdminPage(webDriver);
         recordsPage.recordsPageisDisplayed();
@@ -172,19 +172,41 @@ public class RecordsAdminSteps {
         Thread.sleep(1000);
     }
 
-    @When("^Admin input date on date start field$")
-    public void adminInputDateOnDateStartField() throws InterruptedException {
+    @When("^Admin input date on calendar field \"([^\"]*)\" as start date and \"([^\"]*)\" as end date$")
+    public void adminInputDateOnDateStartField(String startDate, String startEnd) throws InterruptedException {
         RecordsAdminPage recordsPage = new RecordsAdminPage(webDriver);
         recordsPage.clickDateRecords();
-        recordsPage.startDateRecords();
+        recordsPage.startDateRecords(startDate);
+        recordsPage.endDateRecords(startEnd);
         Thread.sleep(1000);
     }
 
-    @When("^Admin input date on date end field$")
-    public void adminInputDateOnDateEndField() throws InterruptedException{
+    @And("^Admin click on search record date button$")
+    public void adminClickOnSearchRecordDateButton() throws InterruptedException{
         RecordsAdminPage recordsPage = new RecordsAdminPage(webDriver);
-        recordsPage.clickDateRecords();
-        recordsPage.endDateRecords();
+        recordsPage.searchWithDate();
+        Thread.sleep(1000);
+    }
+
+    @Then("^System will be showing record with chosen date$")
+    public void systemWillBeShowingRecordWithChosenDate() throws InterruptedException{
+        RecordsAdminPage recordsPage = new RecordsAdminPage(webDriver);
+        recordsPage.recordsPageisDisplayed();
+        Assert.assertTrue(recordsPage.recordsPageisDisplayed());
+        Thread.sleep(1000);
+    }
+
+    @And("^Admin input (-?\\d+) on date start field$")
+    public void adminInputDateOnDateStartField(String dateStart) throws InterruptedException{
+        RecordsAdminPage recordsPage = new RecordsAdminPage(webDriver);
+        recordsPage.addStartDateAttend(dateStart);
+        Thread.sleep(1000);
+    }
+
+    @And("^Admin input (-?\\d+) on date end field$")
+    public void adminInputDateOnDateEndField(String dateEnd) throws InterruptedException{
+        RecordsAdminPage recordsPage = new RecordsAdminPage(webDriver);
+        recordsPage.addEndDateAttend(dateEnd);
         Thread.sleep(1000);
     }
 }

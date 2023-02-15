@@ -27,94 +27,94 @@ public class EmployeesAdminPage {
     String pathCSV = System.getProperty("user.dir")+"\\src\\test\\resources\\input_files\\";
 
     @FindBy(id = "btn-sidebar-employees")
-    private WebElement clickEmployee;
+    public WebElement clickEmployee;
 
     public void employeeNavBar(){ clickEmployee.click();}
     @FindBy(css = ".font-extrabold")
-    private WebElement employeePageDisplayed;
+    WebElement employeePageDisplayed;
 
     public boolean employeePageisDisplayed(){
         return employeePageDisplayed.isDisplayed();
     }
 
     @FindBy(xpath = "//input[@id='input-search']")
-    private WebElement searchField;
+    WebElement searchField;
 
     public void setSearchField(String employee) {
         searchField.sendKeys(employee);
     }
 
     @FindBy(xpath = "//button[@id='btn-search-submit']")
-    private WebElement searchBtn;
+   WebElement searchBtn;
 
     public void clickSearchEmployee() {
         searchBtn.click();
     }
 
     @FindBy(xpath = "//label[@id='btn-import-file']")
-    private WebElement csvBtn;
+    WebElement csvBtn;
 
     public void clickCSV() {
         csvBtn.click();
     }
 
     @FindBy(xpath = "//input[@id='input-import-file']")
-    private WebElement uploadCSV;
+    WebElement uploadCSV;
 
     public void uploadCSV(String csvName){
         uploadCSV.sendKeys(pathCSV+csvName);
     }
 
     @FindBy(xpath = "//button[@id='btn-file-submit']")
-    private WebElement submitCSV;
+    WebElement submitCSV;
 
     public void submitCSVFile(){
         submitCSV.click();
     }
 
     @FindBy(xpath = "//label[@id='btn-file-cancel']")
-    private WebElement cancelCSV;
+    WebElement cancelCSV;
 
     public void cancelCSVFile(){
         cancelCSV.click();
     }
 
     @FindBy(xpath = "//label[@id='btn-add-employee']")
-    private WebElement addBtn;
+    WebElement addBtn;
 
     public void addEmployeeBtn(){
         addBtn.click();
     }
 
     @FindBy(xpath="//input[@id='input-add-name']")
-    private WebElement nameEmployeeField;
+    WebElement nameEmployeeField;
 
     public void addNameEmployee(String nameEmployee){
         nameEmployeeField.sendKeys(nameEmployee);
     }
     @FindBy(xpath="//input[@id='input-add-email']")
-    private WebElement emailEmployeeField;
+    WebElement emailEmployeeField;
 
     public void addEmailEmployee(String emailEmployee){
         emailEmployeeField.sendKeys(emailEmployee);
     }
 
     @FindBy(xpath="//input[@id='input-add-password']")
-    private WebElement pwdEmployeeField;
+    WebElement pwdEmployeeField;
 
     public void addPwdEmployee(String pwdEmployee){
         pwdEmployeeField.sendKeys(pwdEmployee);
     }
 
     @FindBy(xpath="//input[@id='input-add-phone']")
-    private WebElement phoneEmployeeField;
+    WebElement phoneEmployeeField;
 
     public void addPhoneEmployee(String phoneEmployee){
         phoneEmployeeField.sendKeys(phoneEmployee);
     }
 
     @FindBy(xpath="//select[@id='select-add-position']")
-    private WebElement positionEmployeeField;
+    WebElement positionEmployeeField;
 
     public void addPositionEmployee(String pstnEmployee){
         Select b = new Select(positionEmployeeField);
@@ -122,7 +122,7 @@ public class EmployeesAdminPage {
     }
 
     @FindBy(xpath="//select[@id='select-add-gender']")
-    private WebElement genderEmployeeContainer;
+    WebElement genderEmployeeContainer;
 
     public void addGenderEmployee(String genderEmployee){
         Select b = new Select(genderEmployeeContainer);
@@ -131,7 +131,7 @@ public class EmployeesAdminPage {
 
 
     @FindBy(xpath="//input[@id='input-add-birthdate']")
-    private WebElement calendarEmployeeInput;
+    WebElement calendarEmployeeInput;
 
     public void addBirthEmployee(String birthdate){
         calendarEmployeeInput.sendKeys(birthdate);
@@ -139,14 +139,14 @@ public class EmployeesAdminPage {
 
 
     @FindBy(xpath="//textarea[@id='input-add-address']")
-    private WebElement addressEmployeeField;
+    WebElement addressEmployeeField;
 
     public void addAddressEmployee(String addressEmployee){
         addressEmployeeField.sendKeys(addressEmployee);
     }
 
     @FindBy(xpath="//button[@id='btn-add-submit']")
-    private WebElement submitAddEmployee;
+    WebElement submitAddEmployee;
 
     public void addSingleEmployee(){
         submitAddEmployee.click();
@@ -154,13 +154,13 @@ public class EmployeesAdminPage {
     public boolean displayNotSubmit(){ return submitAddEmployee.isDisplayed();}
 
     @FindBy(xpath="//label[@id='btn-add-cancel']")
-    private WebElement cancelAddBtn;
+    WebElement cancelAddBtn;
 
     public void cancelAddBtn(){
         cancelAddBtn.click();
     }
 
-    @FindBy(className = "text-sky hover:cursor-pointer hover:text-orange-500")
+    @FindBy(xpath = "//*[contains(@id,'btn-edit-employee')]")
     public List<WebElement> editProfileBtn;
 
     public void editEmployeeProfileBtn(){
@@ -169,41 +169,41 @@ public class EmployeesAdminPage {
     }
 
     @FindBy(xpath = "//div[@class='undefined p-10']/div[1]//button[@class='mx-3 text-sky hover:cursor-pointer hover:text-red-600']")
-    private WebElement delEmployeeBtn;
+    WebElement delEmployeeBtn;
 
     public void delEmployeeProfileBtn(){
         delEmployeeBtn.click();
     }
 
     @FindBy(xpath = "//h2[@class='swal2-title']")
-    private WebElement warningMsgDelEmployee;
+    WebElement warningMsgDelEmployee;
 
     public boolean warningMsgisDisplayed(){
         return warningMsgDelEmployee.isDisplayed();
     }
 
     @FindBy(css = ".swal2-confirm")
-    private WebElement yesDeleteEmployee;
+    WebElement yesDeleteEmployee;
 
     public void yesDeleteEmployeeBtn(){
         yesDeleteEmployee.click();
     }
 
     @FindBy(css = ".swal2-cancel")
-    private WebElement cancelDeleteEmployee;
+    WebElement cancelDeleteEmployee;
 
     public void cancelDeleteEmployeeBtn(){
         cancelDeleteEmployee.click();
     }
 
     @FindBy(xpath = "//p[.='Bennet']")
-    private WebElement clickNameEmployee;
+    WebElement clickNameEmployee;
 
     public void employeeNameBtn(){
         clickNameEmployee.click();
     }
     @FindBy(xpath = "//div[49]//p[@class='text-right font-bold xl:text-lg text-navy duration-300 hover:cursor-pointer active:scale-95']")
-    private WebElement clickRoleEmployee;
+    WebElement clickRoleEmployee;
 
     public void roleEmployeeProfileBtn(){
         clickRoleEmployee.click();
@@ -212,7 +212,7 @@ public class EmployeesAdminPage {
 
 
     @FindBy(xpath = "//input[@id='input-edit-name']")
-    private WebElement editEmployeeName;
+    WebElement editEmployeeName;
 
     public void editNameEmployee(String nameEmployee){
         editEmployeeName.clear();
@@ -220,7 +220,7 @@ public class EmployeesAdminPage {
     }
 
     @FindBy(xpath = "//input[@id='input-edit-email']")
-    private WebElement editEmployeeEmail;
+    WebElement editEmployeeEmail;
 
     public void editEmailEmployee(String emailEmployee){
         editEmployeeEmail.clear();
@@ -228,7 +228,7 @@ public class EmployeesAdminPage {
     }
 
     @FindBy(xpath = "//input[@id='input-edit-password']")
-    private WebElement editEmployeePwd;
+    WebElement editEmployeePwd;
 
     public void editPwdEmployee(String pwdEmployee){
         editEmployeePwd.clear();
@@ -236,7 +236,7 @@ public class EmployeesAdminPage {
     }
 
     @FindBy(xpath = "//input[@id='input-edit-phone']")
-    private WebElement editEmployeePhone;
+    WebElement editEmployeePhone;
 
     public void editPhoneEmployee(String phoneEmployee){
         editEmployeePhone.clear();
@@ -244,7 +244,7 @@ public class EmployeesAdminPage {
     }
 
     @FindBy(xpath = "//select[@id='select-edit-position']")
-    private WebElement editEmployeeRole;
+    WebElement editEmployeeRole;
 
     public void editRoleEmployee(String roleEmployee){
         Select b = new Select(editEmployeeRole);
@@ -252,7 +252,7 @@ public class EmployeesAdminPage {
     }
 
     @FindBy(xpath = "//select[@id='select-edit-gender']")
-    private WebElement editEmployeeGender;
+    WebElement editEmployeeGender;
 
     public void editGenderEmployee(String genderEmployee){
         Select b = new Select(editEmployeeGender);
@@ -260,7 +260,7 @@ public class EmployeesAdminPage {
     }
 
     @FindBy(xpath = "//input[@id='input-edit-birthdate']")
-    private WebElement editEmployeeBirth;
+    WebElement editEmployeeBirth;
 
     public void editBdayEmployee(String birthEmployee){
         editEmployeeBirth.clear();
@@ -268,49 +268,49 @@ public class EmployeesAdminPage {
     }
 
     @FindBy(xpath = "//textarea[@id='input-edit-address']")
-    private WebElement editEmployeeAddress;
+    WebElement editEmployeeAddress;
 
     public void editAddressEmployee(String addressEmployee){
         editEmployeeAddress.clear();
         editEmployeeAddress.sendKeys(addressEmployee);
     }
 
-    @FindBy(className = "w-24 text-sm text-center border-2 border-sky bg-sky rounded-xl py-1 text-gray-50 font-medium duration-300 hover:cursor-pointer  hover:bg-blue-900  active:scale-90 disabled:bg-gray-300 disabled:text-gray-400 disabled:border-gray-300 disabled:cursor-not-allowed disabled:active:scale-100")
+    @FindBy(xpath = "//div[@class='modal-box pt-52 border-2 border-sky flex flex-col justify-center text-sky']//button[@class='w-24 text-sm text-center border-2 border-sky bg-sky rounded-xl py-1 text-gray-50 font-medium duration-300 hover:cursor-pointer  hover:bg-blue-900  active:scale-90 disabled:bg-gray-300 disabled:text-gray-400 disabled:border-gray-300 disabled:cursor-not-allowed disabled:active:scale-100']")
     public WebElement submitBtn;
 
     public void submitEditEmployeeProfileBtn(){
         submitBtn.click();
     }
 
-    @FindBy(className = "w-24 text-sm text-center border-2 border-sky rounded-xl py-1 text-sky font-medium duration-300 hover:cursor-pointer hover:bg-red-600 hover:text-white  active:scale-90 disabled:bg-gray-300 disabled:text-gray-400 disabled:border-gray-300 disabled:cursor-not-allowed disabled:active:scale-100")
-    private WebElement cancelBtn;
+    @FindBy(css = "w-24 text-sm text-center border-2 border-sky rounded-xl py-1 text-sky font-medium duration-300 hover:cursor-pointer hover:bg-red-600 hover:text-white  active:scale-90 disabled:bg-gray-300 disabled:text-gray-400 disabled:border-gray-300 disabled:cursor-not-allowed disabled:active:scale-100")
+    WebElement cancelBtn;
 
     public void cancelEditEmployeeProfileBtn(){
         cancelBtn.click();
     }
 
-    @FindBy(xpath = "//p[.='Violet Evergarden']")
-    private WebElement showName;
+    @FindBy(xpath = "//p[.='Alif']")
+    WebElement showName;
 
     public boolean showEmployeeName(){ return showName.isDisplayed();}
 
-    @FindBy(xpath = "//div[@class='undefined p-3 md:p-6 xl:p-10']")
-    private WebElement successCreate;
+    @FindBy(xpath = "//h1[@class='capitalize text-xl md:text-2xl lg:text-3xl font-extrabold undefined']")
+    WebElement successCreate;
     public boolean successCreate(){ return successCreate.isDisplayed();}
 
     @FindBy(xpath = "//h1[@class='capitalize text-xl md:text-2xl lg:text-3xl font-extrabold undefined']")
-    private WebElement showProfile;
+    WebElement showProfile;
 
     public boolean employeeProfileIsDisplayed(){return showProfile.isDisplayed();}
 
     @FindBy(xpath = "//button[@id='btn-back']")
-    private WebElement backToEmployee;
+    WebElement backToEmployee;
 
     public void backEmployeePage(){backToEmployee.click();}
 
 
     @FindBy(xpath = "//div[52]//button[@class='text-sky hover:cursor-pointer hover:text-red-600']")
-    private WebElement delEmploy;
+    WebElement delEmploy;
 
     public void deleteEmployeeBtn(){delEmploy.click();}
 

@@ -20,22 +20,22 @@ public class HomeAdminPage {
     @FindBy(xpath="//h1[.='total employees']")
     private WebElement totalEmployees;
 
-    @FindBy(xpath="//h1[@class='capitalize text-xl md:text-2xl lg:text-3xl font-extrabold undefined']")
-    private WebElement employeesPage;
+    @FindBy(id = "btn-sidebar-employees")
+    WebElement employeesPage;
 
     @FindBy(xpath = "//h1[.='employees']")
     private WebElement employeesList;
 
-    @FindBy(xpath = "//h1[.='inbox']")
+    @FindBy(xpath = "//div[@class='box-border w-full bg-white rounded-2xl border-sky border-2 p-3 xl:p-5 undefined']")
     private WebElement inbox;
 
     @FindBy(xpath="//h1[@class='capitalize text-xl md:text-2xl lg:text-3xl font-extrabold undefined']")
-    private WebElement inboxPage;
+    WebElement inboxPage;
 
-    @FindBy(xpath = "//p[.='Traffic total working hours by weekly']")
+    @FindBy(xpath = "//p[.='Traffic total working hours by month']")
     private WebElement workingHours;
 
-    @FindBy(xpath = "//p[.='Traffic total late employees by weekly']")
+    @FindBy(xpath = "//p[.='Traffic total late employees by month']")
     private WebElement lateEmployee;
 
 

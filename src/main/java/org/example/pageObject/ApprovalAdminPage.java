@@ -24,14 +24,14 @@ public class ApprovalAdminPage {
     }
 
     @FindBy(xpath = "//h1[@class='capitalize text-xl md:text-2xl lg:text-3xl font-extrabold undefined']")
-    private WebElement approvalPage;
+    WebElement approvalPage;
 
     public boolean approvalPageisDisplayed(){
         return approvalPage.isDisplayed();
     }
 
     @FindBy(id = "btn-sidebar-approval")
-    private WebElement sidebarBtnAcc;
+    WebElement sidebarBtnAcc;
 
     public void sidebarApprovalBtn(){
         sidebarBtnAcc.click();
@@ -49,19 +49,12 @@ public class ApprovalAdminPage {
         closePopUp.click();
     }
 
-    @FindBy(className = "flex justify-between items-center text-xs md:text-sm lg:text-base hover:cursor-pointer")
+    @FindBy(xpath = "//*[contains(@id,'card-approval')]//section[4]/p[text()='pending']")
     public List<WebElement> selectPending1;
 
     public void selectPendingApproval_1(){
-        int j = randomNumber(101, selectPending1.size() - 1);
+        int j = randomNumber(0, selectPending1.size() - 1);
         selectPending1.get(j).click();}
-
-    @FindBy(xpath = "flex justify-between items-center text-xs md:text-sm lg:text-base hover:cursor-pointer")
-    public List<WebElement> pending;
-
-    public void selectPendingApproval_2(){
-        int j = randomNumber(101, pending.size() - 1);
-        pending.get(j).click();}
 
     @FindBy(xpath = "//button[@id='btn-reject-modals']")
     private WebElement rejectApprovals;
