@@ -25,7 +25,7 @@ Feature: Inbox Functionality
     Given Admin login with "admin" as username and "admin" as password to timesync website
     And Admin successfully on landing page
     And Admin click Settings button
-    When Admin input end office hours to "17:00"
+    When Admin input end office hours to "19:00"
     Then Set end office hours field can be inputted
 
   Scenario: Set office start hour tolerancy
@@ -34,6 +34,14 @@ Feature: Inbox Functionality
     And Admin click Settings button
     When Admin input set office start hours tolerancy to 25
     Then Set start office hours tolerancy field can be inputted
+
+  Scenario: Set end office hours field
+    Given Admin login with "admin" as username and "admin" as password to timesync website
+    And Admin successfully on landing page
+    And Admin click Settings button
+    When Admin input end office hours to "19:00"
+    Then Set end office hours field can be inputted
+
 
   Scenario: Set employees annual leaves
     Given Admin login with "admin" as username and "admin" as password to timesync website

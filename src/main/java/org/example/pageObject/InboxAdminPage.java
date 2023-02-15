@@ -102,7 +102,7 @@ public class InboxAdminPage {
         confirmDelete.click();
     }
 
-    @FindBy(xpath = "//div[@class='h-full w-full overflow-auto mt-20']/div[2]//p[@class='mb-5 pb-2 text-2xl border-b-2 font-bold text-black']")
+    @FindBy(xpath = "//label[contains(.,'Feb 05 2023Appreciation for Relaxed EmployeesCongratulations on this year you we')]")
     private WebElement detailInbox;
 
     public void detailInboxClick(){
@@ -110,7 +110,7 @@ public class InboxAdminPage {
     }
 
 
-    @FindBy(xpath = "//div[@class='undefined p-10']/div[1]//p[@class='mb-5 pb-2 text-2xl border-b-2 font-bold text-black']")
+    @FindBy(xpath = "//div[@class='h-full w-full overflow-auto mt-20']/div[2]//p[@class='mb-5 pb-2 text-2xl border-b-2 font-bold text-black']")
     private WebElement detailPopUp;
 
     public boolean detailInboxisDisplayed(){

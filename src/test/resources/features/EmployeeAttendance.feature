@@ -45,3 +45,4 @@ Feature: Employee Attendance Already Allow Location Permission
     And Employee successfully on landing page
     And Employee click on See more feature
     Then System will showing records page
+

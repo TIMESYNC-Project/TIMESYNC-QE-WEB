@@ -21,5 +21,3 @@ Feature: Employee Inbox
     And Employee click Timesync logo
     Then System bring back to home page attendance
 
-
-

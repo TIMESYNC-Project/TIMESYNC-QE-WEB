@@ -90,9 +90,9 @@ Feature: Inbox Functionality
     And Admin click Inbox on Navigation Bar
     And System will be showing Inbox page
     And Admin click on Create Inbox button
-    When Admin input "23037" on "To" field
+    When Admin input "23005" on "To" field
     And Admin click "Submit" create inbox button
-    Then Message will be sent to NIP "23037"
+    Then Message will be sent to NIP "23005"
 
   Scenario: Close button Inbox
     Given Admin login with "admin" as username and "admin" as password to timesync website

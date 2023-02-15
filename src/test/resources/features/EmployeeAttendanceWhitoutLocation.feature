@@ -17,4 +17,3 @@ Feature: Clock In & Clock Out Employee Whitout Location
     And Employee successfully on landing page
     And Employee click on clock out
     Then System will showing error message clock out "error message clock out"
-

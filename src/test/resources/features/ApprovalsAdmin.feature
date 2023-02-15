@@ -25,7 +25,7 @@ Feature: Approval Functionality
     Given Admin login with "admin" as username and "admin" as password to timesync website
     And Admin successfully on landing page
     And Admin click Approval on Navigation Bar
-    And Admin click selected pending employee card
+    And Admin click selected any pending employee card
     And Detail approval will be displayed
     When Admin click Approve approval button
     Then Approval request will be Approved

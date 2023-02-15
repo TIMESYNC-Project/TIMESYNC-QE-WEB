@@ -109,4 +109,3 @@ Feature: Employee Profile
     Examples:
       | specialChar | warningMsg                      |
       | !@#$%       | validate: 123@# is not alphanum |
-

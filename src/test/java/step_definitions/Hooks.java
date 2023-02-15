@@ -39,6 +39,7 @@ public class Hooks {
         webDriver = new ChromeDriver(options);
         String appUrl = "https://mytimesync.vercel.app/";
         webDriver.get(appUrl);
+
     }
 
     @After

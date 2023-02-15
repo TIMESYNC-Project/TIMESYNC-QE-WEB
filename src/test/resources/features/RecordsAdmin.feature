@@ -27,9 +27,9 @@ Feature: Records Functionality
     Given Admin login with "admin" as username and "admin" as password to timesync website
     And Admin successfully on landing page
     And Admin click Records on Navigation Bar
-    When Admin input "23037" on records search field
+    When Admin input "23002" on records search field
     And Admin click Search button on records page
-    Then System will be showing records with NIP "23037"
+    Then System will be showing records with NIP "23002"
 #
   Scenario: Employee card will redirect to details record
     Given Admin login with "admin" as username and "admin" as password to timesync website
@@ -61,23 +61,15 @@ Feature: Records Functionality
       | On Leave     |
       | Sick Leave   |
 
-  Scenario: Set date start
+  Scenario: Set date
     Given Admin login with "admin" as username and "admin" as password to timesync website
     And Admin successfully on landing page
     And Admin click Records on Navigation Bar
     And Admin click on selected employee name record
-    And Admin click Create Attendance button
-    When Admin input date on date start field
-    Then Date start field will be added
+    When Admin input date on calendar field "09" as start date and "10" as end date
+    And Admin click on search record date button
+    Then System will be showing record with chosen date
 
-  Scenario: Set date end
-    Given Admin login with "admin" as username and "admin" as password to timesync website
-    And Admin successfully on landing page
-    And Admin click Records on Navigation Bar
-    And Admin click on selected employee name record
-    And Admin click Create Attendance button
-    When Admin input date on date end field
-    Then Date end field will be added
 
   Scenario: Cancel New Attendance button
     Given Admin login with "admin" as username and "admin" as password to timesync website
@@ -86,7 +78,7 @@ Feature: Records Functionality
     And Admin click on selected employee name record
     And Admin click Create Attendance button
     And Admin select "Annual Leave" on attendance field
-    And Admin input date on date start field
+    And Admin input 19032023 on date start field
     When Admin click cancel button on Create Attendance
     Then New Attendance will not be created
 
@@ -97,7 +89,7 @@ Feature: Records Functionality
     And Admin click on selected employee name record
     And Admin click Create Attendance button
     And Admin select "Sick Leave" on attendance field
-    And Admin input date on date start field
-    And Admin input date on date end field
+    And Admin input 03032023 on date start field
+    And Admin input 05032023 on date end field
     When Admin click submit button on Create Attendance
     Then New Attendance should be created

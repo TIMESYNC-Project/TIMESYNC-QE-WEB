@@ -18,17 +18,17 @@
     Given Admin login with "admin" as username and "admin" as password to timesync website
     And Admin successfully on landing page
     And Admin click Employees on Navigation Bar
-    When Admin input "Violet Evergarden" on search field
+    When Admin input "Alif" on search field
     And Admin click Search button
-    Then System will be showing profile with name "Violet Evergarden"
+    Then System will be showing profile with name "Alif"
 
   Scenario: Search Employee by NIP
     Given Admin login with "admin" as username and "admin" as password to timesync website
     And Admin successfully on landing page
     And Admin click Employees on Navigation Bar
-    When Admin input "23037" on search field
+    When Admin input "23001" on search field
     And Admin click Search button
-    Then System will be showing profile with name "Violet Evergarden"
+    Then System will be showing profile with name "Alif"
 
   Scenario: Create New Employee using CSV
     Given Admin login with "admin" as username and "admin" as password to timesync website
@@ -44,10 +44,10 @@
     And Admin successfully on landing page
     And Admin click Employees on Navigation Bar
     And Admin click Create a new employee button
-    And Admin add Name field to "Diluc"
-    And Admin add Email field to "ayomaingenshin@gmail.com"
-    And Admin add Password field to "12345"
-    And Admin add Phone field to "+62555"
+    And Admin add Name field to "Bocchi"
+    And Admin add Email field to "kitan@gmail.com"
+    And Admin add Password field to "qwerty"
+    And Admin add Phone field to "+6255425"
     And Admin select position to "Quality Engineer"
     And Admin add gender to "Female"
     And Admin add Birthdate to 110201
@@ -103,10 +103,10 @@
     And Admin successfully on landing page
     And Admin click Employees on Navigation Bar
     And Admin click Edit button on employee card button
-    And Admin edit Name field to "Kaeya"
-    And Admin edit Email field to "risenyan12@gmail.com"
+    And Admin edit Name field to "Bulbasaur"
+    And Admin edit Email field to "kokorra@gmail.com"
     And Admin edit Password field to "112233"
-    And Admin edit Phone field to "+62555333"
+    And Admin edit Phone field to "+6255153343"
     And Admin edit select position to "Frontend Engineer"
     And Admin edit gender to "Male"
     And Admin edit Birthdate tp 110201

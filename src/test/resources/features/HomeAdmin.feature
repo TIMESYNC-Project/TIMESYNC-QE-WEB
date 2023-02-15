@@ -23,13 +23,11 @@ Feature: Home Functionality
   Scenario: Graph Working Hours is displayed
    Given Admin login with "admin" as username and "admin" as password to timesync website
     When Admin successfully on landing page
-    And Admin click Inbox
     Then System will be showing Graph Working Hours page
-    # Masih error di ambil working hours graph
+
 
   Scenario: Graph Late Employees is displayed
     Given Admin login with "admin" as username and "admin" as password to timesync website
     When Admin successfully on landing page
-    And Admin click Inbox
     Then System will be showing Graph Late Employees page
-    # Masih error di ambil late employee graph
+

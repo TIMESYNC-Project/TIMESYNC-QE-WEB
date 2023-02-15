@@ -18,6 +18,3 @@ Feature: Employee Records
     And Employee input date on calendar field "005" as start date and "009" as end date
     And Employee click on search icon
     Then System will showing records list
-
-
-
